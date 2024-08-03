@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        
+        
+    }
+    form{
+        height: 800px;
+    }
+    table{
+        margin: auto;
+        text-align: start;
+        align-items: first baseline;
+        text-shadow: black;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+    button{
+        padding: 10px;
+        background-color: azure;     
+        border-radius: 20px;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+   
+    input{
+        border-radius: 20px;
+    cursor: pointer;
+    box-sizing: 40px;
+        }
+    @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh; 
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 5s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+</style>
+<!-- action is  used storing values in forms, target is display the response,autocomplete is suggest for input-->
+<body>
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+    <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Registration Forms</h1>
+    <form action="submit.php" method="get"target="_blank" autocomplete="on">
+        <table class="table">
+        <tr>
+            <td><label for="firstName">First Name</label></td>
+            <td><label>:</label></td>
+            <td><input type="text" id="firstName" name="firstName" required></td>
+         </tr><br>
+        <tr> 
+            <td><label for="secondName">Second Name</label></td>
+            <td><label>:</label></td>
+            <td><input type="text" id="secondName" name="secondName" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-mail</label></td>
+            <td><label>:</label></td>
+            <td><input type="email" id="email" name="email" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><label>:</label></td>
+            <td><input type="password" id="password" name="password" required><br></td>
+        </tr>
+        <tr> 
+            <td><label for="Phone">Phone</label></td>
+            <td><label>:</label></td>
+            <td><input type="number" id="Phone" name="Phone" required><br></td>
+        </tr>
+        <tr> 
+            <td><label for="date">Date of Birth</label></td>
+            <td><label>:</label></td>
+            <td><input type="date" id="date" value="2000-01-01"name="date" required><br></td>
+        </tr>
+        <tr>
+            <td><label>Gender</label></td>
+            <td><label>:</label></td><br>
+            <td><input type="radio" id="Male" name="Gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="female" name="Gender" value="female">
+                <label for="female">female</label>
+            <input type="radio" id="Other" name="Gender" value="Other">
+                <label for="Other">Other</label></td>
+        </tr>
+        </table><br>
+        <button type="button" >Submit</button>
+    </form>
+    
+
+
+
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+</body>
+</html>
